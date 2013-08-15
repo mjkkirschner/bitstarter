@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 		var currentTime = new Date();
         var hours = currentTime.getHours();
   var data = new Buffer(fs.readFileSync('index.html'));		
-  response.send(hours);
+  response.send(hours.toString());
 });
 
 var port = process.env.PORT || 5000;
