@@ -5,9 +5,9 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 		var currentTime = new Date();
-        var hours = currentTime.getHours();
+         var seconds = currentTime.getSeconds();
   var data = new Buffer(fs.readFileSync('index.html'));		
-  response.send(hours.toString());
+  response.send(seconds.toString());
 });
 
 var port = process.env.PORT || 5000;
