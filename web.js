@@ -6,7 +6,7 @@ app.use(express.logger());
 app.get('/', function(request, response) {
 
   var data = new Buffer(fs.readFileSync('index.html'));		
-  response.send(data.toString;
+  response.send(data.toString);
 });
 
 var port = process.env.PORT || 5000;
